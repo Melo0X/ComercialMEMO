@@ -187,6 +187,7 @@
         [data-slide="4"] .card:nth-child(2) { border-top: 3px solid var(--accent-orange); background: linear-gradient(180deg, rgba(255, 140, 66, 0.08) 0%, var(--gray-900) 20%); }
         [data-slide="4"] .card:nth-child(3) { border-top: 3px solid var(--accent-yellow); background: linear-gradient(180deg, rgba(249, 199, 79, 0.08) 0%, var(--gray-900) 20%); }
         [data-slide="4"] .card:nth-child(4) { border-top: 3px solid var(--accent-green); background: linear-gradient(180deg, rgba(144, 190, 109, 0.08) 0%, var(--gray-900) 20%); }
+        [data-slide="4"] .card:nth-child(5) { border-top: 3px solid #9D4EDD; background: linear-gradient(180deg, rgba(157, 78, 221, 0.08) 0%, var(--gray-900) 20%); }
 
         .card-icon {
             font-size: 2rem;
@@ -202,6 +203,7 @@
         [data-slide="4"] .card:nth-child(2) .card-icon { background: rgba(255, 140, 66, 0.15); }
         [data-slide="4"] .card:nth-child(3) .card-icon { background: rgba(249, 199, 79, 0.15); }
         [data-slide="4"] .card:nth-child(4) .card-icon { background: rgba(144, 190, 109, 0.15); }
+        [data-slide="4"] .card:nth-child(5) .card-icon { background: rgba(157, 78, 221, 0.15); }
 
         .card-title {
             font-family: 'Outfit', sans-serif;
@@ -444,6 +446,17 @@
         .spec-list .label { color: var(--gray-500); }
         .spec-list .value { color: var(--white); font-weight: 500; }
 
+        .layout-note {
+            margin-top: 16px;
+            padding: 12px 16px;
+            background: var(--gray-900);
+            border-radius: 8px;
+            border: 1px dashed var(--gray-700);
+            font-size: 0.85rem;
+            color: var(--gray-500);
+            font-style: italic;
+        }
+
         .closing-content { text-align: center; }
 
         .closing-logo {
@@ -469,18 +482,27 @@
             border: 1px solid var(--gray-700);
             text-align: center;
             margin-top: 24px;
-            max-width: 320px;
+            max-width: 380px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .contact-name { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 1.1rem; margin-bottom: 4px; }
-        .contact-role { font-size: 0.75rem; color: var(--accent-blue); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
-        .contact-links { display: flex; flex-direction: column; gap: 10px; align-items: center; }
-        .contact-links a { color: var(--gray-300); text-decoration: none; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 8px; }
+        .contact-item {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--gray-800);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-name { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.95rem; margin-bottom: 2px; }
+        .contact-role { font-size: 0.65rem; color: var(--accent-blue); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+        .contact-links { display: flex; flex-direction: column; gap: 6px; align-items: center; }
+        .contact-links a { color: var(--gray-300); text-decoration: none; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 6px; }
         .contact-links a:hover { color: var(--accent-blue); }
-        .contact-icon { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; flex-shrink: 0; }
-        .contact-icon svg { width: 18px; height: 18px; }
+        .contact-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; flex-shrink: 0; }
+        .contact-icon svg { width: 16px; height: 16px; }
         .contact-links a:first-child .contact-icon svg { color: #25D366; }
         .contact-links a:last-child .contact-icon svg { color: var(--accent-blue); }
 
@@ -594,8 +616,8 @@
             <div class="slide-content">
                 <div class="section-label">Quem Somos</div>
                 <h2>Sua <span class="accent">memória</span> favorita, na sua mão, em 3 minutos.</h2>
-                <p>A MEMO é uma marca de experiência. O cliente escolhe uma foto do celular — um momento especial, uma pessoa querida, uma lembrança — e em poucos minutos transforma isso em um objeto físico personalizado que ele carrega consigo todos os dias.</p>
-                <p>Nosso primeiro produto são <strong>capas de celular personalizadas</strong> com impressão instantânea de alta qualidade, onde o cliente participa do processo de criação através da nossa tecnologia e do acompanhamento do anfitrião.</p>
+                <p>A MEMO é uma marca onde o nosso "carro-chefe" é a experiência. O cliente escolhe o que quer eternizar — uma foto, uma frase, uma logo — e em poucos minutos transforma isso em um objeto físico personalizado. Tudo acontece ao vivo, com tecnologia própria e acompanhamento de um anfitrião/operador.</p>
+                <p style="margin-top: 16px;">Nosso primeiro produto são <strong>capas de celular personalizadas</strong> com impressão instantânea de alta qualidade.</p>
                 <div class="emphasis-box">
                     <p>Não somos loja de capinha. <strong>Somos uma marca que materializa momentos</strong> — e fazemos isso através de tecnologia e encantamento.</p>
                 </div>
@@ -627,7 +649,7 @@
                         <div class="ritual-number">3</div>
                         <div class="ritual-content">
                             <div class="ritual-name">Criação guiada</div>
-                            <div class="ritual-desc">Cliente escolhe a foto e personaliza com ajuda de IA</div>
+                            <div class="ritual-desc">Cliente escolhe sua foto, logo, frase ou cria do zero com a MEMO IA</div>
                         </div>
                     </div>
                     <div class="ritual-step">
@@ -656,8 +678,8 @@
                 <div class="grid-2">
                     <div class="card">
                         <div class="card-icon">🤖</div>
-                        <div class="card-title">IA exclusiva no totem</div>
-                        <div class="card-text">Restaurar imagens, edições avançadas e templates exclusivos — tudo na hora, direto no nosso sistema.</div>
+                        <div class="card-title">MEMO IA — Criação sem limites</div>
+                        <div class="card-text">Foto pessoal, logo da empresa, frase especial ou arte do zero — o cliente cria o que quiser. Restauração em 4K, estilos artísticos e templates exclusivos.</div>
                     </div>
                     <div class="card">
                         <div class="card-icon">🎨</div>
@@ -673,6 +695,11 @@
                         <div class="card-icon">👤</div>
                         <div class="card-title">Atendimento guiado</div>
                         <div class="card-text">Anfitriões treinados acompanham todo o processo — alcançando clientes que buscam orientação e conexão.</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📍</div>
+                        <div class="card-title">Momento Filmável</div>
+                        <div class="card-text">O kiosk foi projetado para ser "instagramável". Iluminação, ângulo e ambientação pensados para o cliente filmar e compartilhar.</div>
                     </div>
                 </div>
             </div>
@@ -737,23 +764,23 @@
                     <tbody>
                         <tr>
                             <td>🟡 Base</td>
-                            <td class="dim">500</td>
-                            <td class="highlight">R$ 64.500</td>
+                            <td class="dim">450 (15/dia)</td>
+                            <td class="highlight">R$ 58.050</td>
                         </tr>
                         <tr>
-                            <td>🟢 Meta</td>
-                            <td class="dim">900</td>
-                            <td class="highlight">R$ 116.100</td>
+                            <td>🟢 Realista</td>
+                            <td class="dim">600 (20/dia)</td>
+                            <td class="highlight">R$ 77.400</td>
                         </tr>
                         <tr>
-                            <td>🔵 Stretch</td>
-                            <td class="dim">1.200+</td>
-                            <td class="highlight">R$ 154.800+</td>
+                            <td>🔵 Meta</td>
+                            <td class="dim">750 (25/dia)</td>
+                            <td class="highlight">R$ 96.750</td>
                         </tr>
                     </tbody>
                 </table>
                 <div class="emphasis-box" style="margin-top: 16px;">
-                    <p>A operação se paga com aproximadamente <strong>17 vendas por dia</strong> — uma meta confortável para o modelo de atendimento guiado.</p>
+                    <p>A operação atinge o ponto de equilíbrio com aproximadamente <strong>6 a 7 vendas por dia</strong> — uma meta confortável para o modelo de atendimento guiado.</p>
                 </div>
             </div>
         </div>
@@ -809,8 +836,11 @@
                     <li><span class="label">Equipe por turno</span><span class="value">1 a 2 Anfitriões</span></li>
                     <li><span class="label">Estoque</span><span class="value">Compacto — cases em branco</span></li>
                     <li><span class="label">Logística</span><span class="value">Sem carga/descarga pesada</span></li>
-                    <li><span class="label">Conceito visual</span><span class="value">Premium · Minimalista</span></li>
+                    <li><span class="label">Conceito visual</span><span class="value">Premium · Minimalista · Instagramável</span></li>
                 </ul>
+                <div class="layout-note">
+                    * Layout conceitual. Projeto arquitetônico definitivo será apresentado conforme especificações técnicas do shopping.
+                </div>
             </div>
         </div>
 
@@ -822,6 +852,7 @@
                 <ul class="benefit-list">
                     <li><strong>Mix diferenciado</strong> — experiência inédita no Brasil que gera curiosidade e tráfego para o entorno</li>
                     <li><strong>Conteúdo orgânico</strong> — clientes filmam e postam a criação espontaneamente, gerando exposição para o shopping</li>
+                    <li><strong>Renovação constante</strong> — visual e temáticas sazonais que mantêm o kiosk sempre "novo" (Dia das Mães, Copa, Carnaval)</li>
                     <li><strong>Operação limpa</strong> — sem estoque pesado, sem carga/descarga, sem barulho, sem poluição visual</li>
                     <li><strong>Visual premium</strong> — conceito minimalista que valoriza o ambiente, projetado por arquiteto</li>
                     <li><strong>Área compacta</strong> — 6 a 9 m² em ponto estratégico de alto fluxo</li>
@@ -834,19 +865,32 @@
         <div class="slide slide-cover" data-slide="10">
             <div class="slide-content closing-content">
                 <div class="closing-logo">MEMO</div>
-                <div class="logo-subtext" style="margin-bottom: 16px;">Kiosk Experience</div>
-                <p class="closing-tagline">"Não vendemos objetos.<br>Materializamos momentos."</p>
+                <p class="closing-tagline">"Você cria. Nós eternizamos."</p>
                 <div class="cover-divider" style="margin: 0 auto 24px;"></div>
                 <p style="font-size: 0.9rem;">Disponíveis para reunião e apresentação presencial.</p>
                 <div class="contact-card">
-                    <div class="contact-name">Leonardo Lobo</div>
-                    <div class="contact-role">COO</div>
-                    <div class="contact-links">
-                        <a href="https://wa.me/5571987886198" target="_blank" rel="noopener">
-                            <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></span>
-                            (71) 98788-6198
-                        </a>
-                        <a href="mailto:contato@memo-case.com">
+                    <div class="contact-item">
+                        <div class="contact-name">Paulo Melo</div>
+                        <div class="contact-role">CEO</div>
+                        <div class="contact-links">
+                            <a href="https://wa.me/5571991781919" target="_blank" rel="noopener">
+                                <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></span>
+                                (71) 99178-1919
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-name">Leonardo Lobo</div>
+                        <div class="contact-role">COO</div>
+                        <div class="contact-links">
+                            <a href="https://wa.me/5571987886198" target="_blank" rel="noopener">
+                                <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></span>
+                                (71) 98788-6198
+                            </a>
+                        </div>
+                    </div>
+                    <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--gray-800);">
+                        <a href="mailto:contato@memo-case.com" style="color: var(--gray-400); text-decoration: none; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 6px;">
                             <span class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
                             contato@memo-case.com
                         </a>
